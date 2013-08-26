@@ -29,6 +29,10 @@ class icinga::config::server::debian {
     content => template('icinga/debian/icinga.cfg'),
   }
 
+  file{"${::icinga::confdir_server}/commands.cfg":
+    content => template('icinga/debian/commands.cfg'),
+  }
+
   file{"${::icinga::confdir_server}/cgi.cfg":
     content => template('icinga/debian/cgi.cfg'),
   }

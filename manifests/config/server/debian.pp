@@ -25,6 +25,11 @@ class icinga::config::server::debian {
     notify  => Service[$::icinga::service_webserver],
   }
 
+  file{"${::icinga::confdir_server}/modules":
+    ensure  => directory,
+    recurse => true,
+  }
+
   file{"${::icinga::confdir_server}/icinga.cfg":
     content => template('icinga/debian/icinga.cfg'),
   }

@@ -35,7 +35,7 @@ class icinga::params {
       $package_client_ensure     = 'present'
       $package_server_ensure     = 'present'
       $package_client            = [ 'nagios-nrpe-server', 'nagios-plugins' ]
-      $package_server            = [ 'icinga', 'icinga-core', 'icinga-common', 'icinga-cgi', 'icinga-phpapi', 'nagios-nrpe-plugin' ]
+      $package_server            = [ 'icinga', 'icinga-core', 'icinga-common', 'icinga-cgi', 'nagios-nrpe-plugin' ]
       $service_client            = 'nagios-nrpe-server'
       $service_client_ensure     = 'running'
       $service_client_enable     = true

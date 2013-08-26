@@ -41,4 +41,6 @@ class icinga::config::server::debian {
     content => template('icinga/debian/objects/generic-host_icinga.cfg'),
   }
 
+  # On Debian/Ubuntu CSS files are installed under /etc for easy customisation
+  file{"${::icinga::confdir_server}/stylesheets":}
 }

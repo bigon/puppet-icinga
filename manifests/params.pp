@@ -25,6 +25,8 @@ class icinga::params {
   $hostgroups                  = 'default'
   $notifications_enabled       = '1'
   $process_performance_data    = '0'
+  $host_perfdata_file          = undef
+  $service_perfdata_file       = undef
 
   case $::operatingsystem {
     'Debian', 'Ubuntu': {

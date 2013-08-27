@@ -3,30 +3,32 @@
 # Full description of class icinga here.
 #
 class icinga::params {
-  $manage_repo                 = false
-  $client                      = true
-  $server                      = false
-  $use_auth                    = true
-  $plugins                     = [ 'checkpuppet' ]
-  $nrpe_allowed_hosts          = [ '127.0.0.1,', $::ipaddress ]
-  $nrpe_server_address         = $::ipaddress
-  $icinga_admins               = '*'
-  $collect_ipaddress           = $::ipaddress
-  $collect_hostname            = $::fqdn
-  $notification_cmd_host       = 'notify-host-by-email'
-  $notification_cmd_service    = 'notify-service-by-email'
-  $notification_period         = '24x7'
-  $notification_host_enable    = '1'
-  $notification_host_opts      = 'd,r'
-  $notification_service_enable = '1'
-  $notification_service_opts   = 'w,u,c,r'
-  $max_check_attempts          = '4'
-  $parents                     = undef
-  $hostgroups                  = 'default'
-  $notifications_enabled       = '1'
-  $process_performance_data    = '0'
-  $host_perfdata_file          = undef
-  $service_perfdata_file       = undef
+  $manage_repo                              = false
+  $client                                   = true
+  $server                                   = false
+  $use_auth                                 = true
+  $plugins                                  = [ 'checkpuppet' ]
+  $nrpe_allowed_hosts                       = [ '127.0.0.1,', $::ipaddress ]
+  $nrpe_server_address                      = $::ipaddress
+  $icinga_admins                            = '*'
+  $collect_ipaddress                        = $::ipaddress
+  $collect_hostname                         = $::fqdn
+  $notification_cmd_host                    = 'notify-host-by-email'
+  $notification_cmd_service                 = 'notify-service-by-email'
+  $notification_period                      = '24x7'
+  $notification_host_enable                 = '1'
+  $notification_host_opts                   = 'd,r'
+  $notification_service_enable              = '1'
+  $notification_service_opts                = 'w,u,c,r'
+  $max_check_attempts                       = '4'
+  $parents                                  = undef
+  $hostgroups                               = 'default'
+  $notifications_enabled                    = '1'
+  $process_performance_data                 = '0'
+  $host_perfdata_file                       = undef
+  $service_perfdata_file                    = undef
+  $host_perfdata_file_processing_command    = undef
+  $service_perfdata_file_processing_command = undef
 
   case $::operatingsystem {
     'Debian', 'Ubuntu': {

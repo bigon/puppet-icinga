@@ -882,10 +882,10 @@ process_performance_data=<%= scope.lookupvar('icinga::process_performance_data')
 #service_perfdata_file=/tmp/service-perfdata
 
 <% if @host_perfdata_file -%>
-host_perfdata_file=<%= scope.lookupvar('icinga::host_perfdata_file') -%>
+host_perfdata_file=<%= scope.lookupvar('icinga::host_perfdata_file') %>
 <% end -%>
 <% if @service_perfdata_file -%>
-service_perfdata_file=<%= scope.lookupvar('icinga::service_perfdata_file') -%>
+service_perfdata_file=<%= scope.lookupvar('icinga::service_perfdata_file') %>
 <% end -%>
 
 
@@ -933,9 +933,12 @@ service_perfdata_file_processing_interval=15
 # service performance data files.  The interval at which the
 # processing occurs is determined by the options above.
 
-host_perfdata_file_processing_command=process-host-perfdata-file
-service_perfdata_file_processing_command=process-service-perfdata-file
-
+<% if @host_perfdata_file_processing_command -%>
+host_perfdata_file_processing_command=<%= scope.lookupvar('icinga::host_perfdata_file_processing_command') %>
+<% end -%>
+<% if @service_perfdata_file_processing_command -%>
+service_perfdata_file_processing_command=<%= scope.lookupvar('icinga::service_perfdata_file_processing_command') %>
+<% end -%>
 
 
 # OBSESS OVER SERVICE CHECKS OPTION

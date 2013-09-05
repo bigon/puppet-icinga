@@ -118,6 +118,7 @@ class icinga (
   $service_perfdata_file                    = $::icinga::params::service_perfdata_file,
   $host_perfdata_file_processing_command    = $::icinga::params::host_perfdata_file_processing_command,
   $service_perfdata_file_processing_command = $::icinga::params::service_perfdata_file_processing_command,
+  $idoutils_enabled                         = $::icinga::params::idoutils_enabled,
   $idoutils_dbname                          = $::icinga::params::idoutils_dbname,
   $idoutils_dbuser                          = $::icinga::params::idoutils_dbuser,
   $idoutils_dbpass                          = $::icinga::params::idoutils_dbpass,

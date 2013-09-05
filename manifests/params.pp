@@ -92,6 +92,7 @@ class icinga::params {
       $idoutils_pkg     = 'icinga-idoutils'
       $idoutils_confdir = '/etc/icinga/idoutils'
       $idoutils_service = 'ido2db'
+      $idoutils_enabled = false
       $idoutils_dbname  = 'icinga'
       $idoutils_dbuser  = 'icinga'
       $idoutils_dbpass  = 'icinga'
@@ -158,6 +159,7 @@ class icinga::params {
       $idoutils_pkg     = [ 'icinga-idoutils', 'libdbi', 'libdbi-devel', 'libdbi-drivers', 'libdbi-dbd-mysql' ]
       $idoutils_confdir = '/etc/icinga/idoutils'
       $idoutils_service = 'ido2db'
+      $idoutils_enabled = false
       $idoutils_dbname  = 'icinga'
       $idoutils_dbuser  = 'icinga'
       $idoutils_dbpass  = 'icinga'

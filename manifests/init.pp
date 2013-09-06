@@ -122,6 +122,9 @@ class icinga (
   $idoutils_dbname                          = $::icinga::params::idoutils_dbname,
   $idoutils_dbuser                          = $::icinga::params::idoutils_dbuser,
   $idoutils_dbpass                          = $::icinga::params::idoutils_dbpass,
+  $icingaweb_dbname                         = $::icinga::params::icingaweb_dbname,
+  $icingaweb_dbuser                         = $::icinga::params::icingaweb_dbuser,
+  $icingaweb_dbpass                         = $::icinga::params::icingaweb_dbpass,
 ) inherits icinga::params {
 
   # motd::register { 'icinga-refactor': }

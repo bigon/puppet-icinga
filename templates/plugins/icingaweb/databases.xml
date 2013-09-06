@@ -11,7 +11,7 @@
     <!-- 
     Overwrite the icinga-web database (where users, roles, views, etc are stored 
     -->
-    <!--
+
     <db:database name="icinga_web" class="AppKitDoctrineDatabase">
         <ae:parameter name="dsn">mysql://<%= scope.lookupvar('icinga::icingaweb_dbuser') %>:<%= scope.lookupvar('icinga::icingaweb_dbpass') %>@localhost:3306/<%= scope.lookupvar('icinga::icingaweb_dbname') %></ae:parameter>
         <ae:parameter name="charset">utf8</ae:parameter>
@@ -33,16 +33,16 @@
         </ae:parameter>		
         
     </db:database>
-    -->
+
 
     <!-- 
         Overwrite the default database conneciton for icinga data retrieval
         Make sure to use IcingaDoctrineDatabase, otherwise the use_retained parameter will be ignored
         EXAMPLE (oracle needs icingaOracle as the db driver) 
     -->
-    <!--
+
     <db:database xmlns="http://agavi.org/agavi/config/parts/databases/1.0" name="icinga" class="IcingaDoctrineDatabase">
-        <ae:parameter name="dsn">mysql://icinga:icinga@localhost:3306/icinga</ae:parameter>
+	    <ae:parameter name="dsn">mysql://<%= scope.lookupvar('icinga::idoutils_dbname') %>:<%= scope.lookupvar('icinga::idoutils_dbpass') %>@localhost:3306/<%= scope.lookupvar('icinga::idoutils_dbname') %></ae:parameter>
         <ae:parameter name="prefix">icinga_</ae:parameter>
         <ae:parameter name="charset">utf8</ae:parameter>
          <ae:parameter name="use_retained">true</ae:parameter>
@@ -59,6 +59,6 @@
 
     </db:database>
 
-    -->
+
     
 </databases>

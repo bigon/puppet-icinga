@@ -9,9 +9,6 @@ class icinga::plugins::icingaweb::config {
   }
 
   file {
-    $icinga::params::icingaweb_confdir:
-      ensure  => directory;
-
     $icinga::params::icingaweb_logdir:
       ensure => directory;
 
